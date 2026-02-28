@@ -1,0 +1,86 @@
+name: Daily Papers
+
+on:
+  schedule:
+    # Run at 08:00 UTC every day (after HF updates ~06:00 UTC)
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date to fetch (YYYY-MM-DD, leave blank for today)"
+        required: false
+        default: ""
+      top_n:
+        description: "Number of top papers to fetch"
+        required: false
+        default: "10"
+      summarize:
+        description: "Generate AI summaries (requires OPENAI_API_KEY)"
+        required: false
+        default: "true"
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine fetch date
+        id: date
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            echo "date=${{ github.event.inputs.date }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch daily papers
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          HF_API_KEY: ${{ secrets.HF_API_KEY }}
+        run: |
+          ARGS="--date ${{ steps.date.outputs.date }} --top ${{ github.event.inputs.top_n || '10' }}"
+          if [ "${{ github.event.inputs.summarize }}" != "false" ]; then
+            ARGS="$ARGS --summarize"
+          fi
+          python scripts/fetch_papers.py $ARGS
+
+      - name: Commit and push new papers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/papers/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: add papers for ${{ steps.date.outputs.date }}"
+            git push
+          fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build Next.js site
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1

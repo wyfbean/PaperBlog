@@ -1,0 +1,21 @@
+{
+  "date": "2025-02-28",
+  "generatedAt": "2025-02-28T12:00:00.000Z",
+  "papers": [
+    {
+      "id": "2502.12345",
+      "title": "Example Paper: Advances in Large Language Models",
+      "authors": ["Alice Smith", "Bob Johnson", "Carol Williams"],
+      "abstract": "We present a comprehensive study on scaling large language models with novel training techniques that improve efficiency and performance across diverse benchmarks.",
+      "summary": "This paper introduces new training methods for LLMs that achieve state-of-the-art performance while reducing computational cost by 30%. The key innovations include adaptive learning rate scheduling and a novel attention mechanism.",
+      "url": "https://huggingface.co/papers/2502.12345",
+      "pdfUrl": "https://arxiv.org/pdf/2502.12345",
+      "thumbnailUrl": null,
+      "upvotes": 245,
+      "publishedAt": "2025-02-28T00:00:00.000Z",
+      "fetchedAt": "2025-02-28T06:00:00.000Z",
+      "tags": ["LLM", "NLP", "Efficiency"],
+      "arxivId": "2502.12345"
+    }
+  ]
+}
