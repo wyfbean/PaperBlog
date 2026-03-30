@@ -1,0 +1,192 @@
+{
+  "date": "2026-03-30",
+  "papers": [
+    {
+      "id": "2603.25716",
+      "title": "Out of Sight but Not Out of Mind: Hybrid Memory for Dynamic Video World Models",
+      "authors": [
+        "Kaijin Chen,",
+        "Dingkang Liang,",
+        "Xin Zhou,",
+        "Yikang Ding,",
+        "Xiaoqiang Liu,",
+        "Pengfei Wan,",
+        "Xiang Bai"
+      ],
+      "abstract": "Video world models have shown immense potential in simulating the physical world, yet existing memory mechanisms primarily treat environments as static canvases. When dynamic subjects hide out of sight and later re-emerge, current methods often struggle, leading to frozen, distorted, or vanishing subjects. To address this, we introduce Hybrid Memory , a novel paradigm requiring models to simultaneously act as precise archivists for static backgrounds and vigilant trackers for dynamic subjects , ensuring motion continuity during out-of-view intervals. To facilitate research in this direction, we construct HM-World, the first large-scale video dataset dedicated to hybrid memory . It features 59K high-fidelity clips with decoupled camera and subject trajectories, encompassing 17 diverse scenes, 49 distinct subjects, and meticulously designed exit-entry events to rigorously evaluate hybrid coherence. Furthermore, we propose HyDRA, a specialized memory architecture that compresses memory into tokens and utilizes a spatiotemporal relevance-driven retrieval mechanism. By selectively attending to relevant motion cues, HyDRA effectively preserves the identity and motion of hidden subjects. Extensive experiments on HM-World demonstrate that our method significantly outperforms state-of-the-art approaches in both dynamic subject consistency and overall generation quality.",
+      "summary": "Video world models have shown immense potential in simulating the physical world, yet existing memory mechanisms primarily treat environments as static canvases. When dynamic subjects hide out of sight and later re-emerge, current methods often struggle, leading to frozen, distorted, or vanishing subjects. To address this, we introduce Hybrid Memory , a novel paradigm requiring models to simultaneously act as precise archivists for static backgrounds and vigilant trackers for dynamic subjects , ensuring motion continuity during out-of-view intervals.",
+      "url": "https://huggingface.co/papers/2603.25716",
+      "pdfUrl": "https://arxiv.org/pdf/2603.25716",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2603.25716/gradient.png",
+      "upvotes": 124,
+      "publishedAt": "2026-03-30T09:09:40.556648+00:00",
+      "fetchedAt": "2026-03-30T09:09:40.556648+00:00",
+      "tags": [],
+      "arxivId": "2603.25716"
+    },
+    {
+      "id": "2603.25746",
+      "title": "ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling",
+      "authors": [
+        "Yawen Luo,",
+        "Xiaoyu Shi,",
+        "Junhao Zhuang,",
+        "Yutian Chen,",
+        "Quande Liu,",
+        "Xintao Wang,",
+        "Pengfei Wan,",
+        "Tianfan Xue"
+      ],
+      "abstract": "Multi-shot video generation is crucial for long narrative storytelling, yet current bidirectional architectures suffer from limited interactivity and high latency. We propose ShotStream, a novel causal multi-shot architecture that enables interactive storytelling and efficient on-the-fly frame generation. By reformulating the task as next-shot generation conditioned on historical context, ShotStream allows users to dynamically instruct ongoing narratives via streaming prompts. We achieve this by first fine-tuning a text-to-video model into a bidirectional next-shot generator, which is then distilled into a causal student via Distribution Matching Distillation . To overcome the challenges of inter-shot consistency and error accumulation inherent in autoregressive generation , we introduce two key innovations. First, a dual-cache memory mechanism preserves visual coherence: a global context cache retains conditional frames for inter-shot consistency , while a local context cache holds generated frames within the current shot for intra-shot consistency . And a RoPE discontinuity indicator is employed to explicitly distinguish the two caches to eliminate ambiguity. Second, to mitigate error accumulation , we propose a two-stage distillation strategy. This begins with intra-shot self-forcing conditioned on ground-truth historical shots and progressively extends to inter-shot self-forcing using self-generated histories, effectively bridging the train-test gap . Extensive experiments demonstrate that ShotStream generates coherent multi-shot videos with sub-second latency, achieving 16 FPS on a single GPU. It matches or exceeds the quality of slower bidirectional models, paving the way for real-time interactive storytelling. Training and inference code, as well as the models, are available on our",
+      "summary": "Multi-shot video generation is crucial for long narrative storytelling, yet current bidirectional architectures suffer from limited interactivity and high latency. We propose ShotStream, a novel causal multi-shot architecture that enables interactive storytelling and efficient on-the-fly frame generation. By reformulating the task as next-shot generation conditioned on historical context, ShotStream allows users to dynamically instruct ongoing narratives via streaming prompts.",
+      "url": "https://huggingface.co/papers/2603.25746",
+      "pdfUrl": "https://arxiv.org/pdf/2603.25746",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2603.25746/gradient.png",
+      "upvotes": 100,
+      "publishedAt": "2026-03-30T09:09:41.716548+00:00",
+      "fetchedAt": "2026-03-30T09:09:41.716548+00:00",
+      "tags": [],
+      "arxivId": "2603.25746"
+    },
+    {
+      "id": "2603.25730",
+      "title": "PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference",
+      "authors": [
+        "Xiaofeng Mao,",
+        "Shaohao Rui,",
+        "Kaining Ying,",
+        "Bo Zheng,",
+        "Chuanhao Li,",
+        "Mingmin Chi,",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Autoregressive video diffusion models have demonstrated remarkable progress, yet they remain bottlenecked by intractable linear KV-cache growth, temporal repetition , and compounding errors during long-video generation. To address these challenges, we present PackForcing, a unified framework that efficiently manages the generation history through a novel three-partition KV-cache strategy. Specifically, we categorize the historical context into three distinct types: (1) Sink tokens , which preserve early anchor frames at full resolution to maintain global semantics; (2) Mid tokens , which achieve a massive spatiotemporal compression (32x token reduction) via a dual-branch network fusing progressive 3D convolutions with low-resolution VAE re-encoding ; and (3) Recent tokens , kept at full resolution to ensure local temporal coherence. To strictly bound the memory footprint without sacrificing quality, we introduce a dynamic top-k context selection mechanism for the mid tokens , coupled with a continuous Temporal RoPE Adjustment that seamlessly re-aligns position gaps caused by dropped tokens with negligible overhead. Empowered by this principled hierarchical context compression , PackForcing can generate coherent 2-minute, 832x480 videos at 16 FPS on a single H200 GPU. It achieves a bounded KV cache of just 4 GB and enables a remarkable 24x temporal extrapolation (5s to 120s), operating effectively either zero-shot or trained on merely 5-second clips. Extensive results on VBench demonstrate state-of-the-art temporal consistency (26.07) and dynamic degree (56.25), proving that short-video supervision is sufficient for high-quality, long-video synthesis. https://github.com/ShandaAI/PackForcing",
+      "summary": "Autoregressive video diffusion models have demonstrated remarkable progress, yet they remain bottlenecked by intractable linear KV-cache growth, temporal repetition , and compounding errors during long-video generation. To address these challenges, we present PackForcing, a unified framework that efficiently manages the generation history through a novel three-partition KV-cache strategy. Specifically, we categorize the historical context into three distinct types: (1) Sink tokens , which preserve early anchor frames at full resolution to maintain global semantics; (2) Mid tokens , which achieve a massive spatiotemporal compression (32x token reduction) via a dual-branch network fusing progressive 3D convolutions with low-resolution VAE re-encoding ; and (3) Recent tokens , kept at full resolution to ensure local temporal coherence.",
+      "url": "https://huggingface.co/papers/2603.25730",
+      "pdfUrl": "https://arxiv.org/pdf/2603.25730",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2603.25730/gradient.png",
+      "upvotes": 24,
+      "publishedAt": "2026-03-30T09:09:42.884235+00:00",
+      "fetchedAt": "2026-03-30T09:09:42.884235+00:00",
+      "tags": [],
+      "arxivId": "2603.25730"
+    },
+    {
+      "id": "2603.25158",
+      "title": "Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills",
+      "authors": [
+        "Jingwei Ni,",
+        "Yihao Liu,",
+        "Xinpeng Liu,",
+        "Yutao Sun,",
+        "Mengyu Zhou,",
+        "Pengyu Cheng,",
+        "Dexin Wang,",
+        "Xiaoxi Jiang,",
+        "Guanjun Jiang"
+      ],
+      "abstract": "Equipping Large Language Model (LLM) agents with domain-specific skills is critical for tackling complex tasks. Yet, manual authoring creates a severe scalability bottleneck. Conversely, automated skill generation often yields fragile or fragmented results because it either relies on shallow parametric knowledge or sequentially overfits to non-generalizable trajectory-local lessons. To overcome this, we introduce Trace2Skill, a framework that mirrors how human experts author skills: by holistically analyzing broad execution experience before distilling it into a single, comprehensive guide. Instead of reacting sequentially to individual trajectories, Trace2Skill dispatches a parallel fleet of sub-agents to analyze a diverse pool of executions. It extracts trajectory-specific lessons and hierarchically consolidates them into a unified, conflict-free skill directory via inductive reasoning . Trace2Skill supports both deepening existing human-written skills and creating new ones from scratch. Experiments in challenging domains, such as spreadsheet, VisionQA and math reasoning, show that Trace2Skill significantly improves upon strong baselines, including Anthropic's official xlsx skills. Crucially, this trajectory-grounded evolution does not merely memorize task instances or model-specific quirks: evolved skills transfer across LLM scales and generalize to OOD settings. For example, skills evolved by Qwen3.5-35B on its own trajectories improved a Qwen3.5-122B agent by up to 57.65 absolute percentage points on WikiTableQuestions. Ultimately, our results demonstrate that complex agent experience can be packaged into highly transferable, declarative skills -- requiring no parameter updates, no external retrieval modules, and utilizing open-source models as small as 35B parameters.",
+      "summary": "Equipping Large Language Model (LLM) agents with domain-specific skills is critical for tackling complex tasks. Yet, manual authoring creates a severe scalability bottleneck. Conversely, automated skill generation often yields fragile or fragmented results because it either relies on shallow parametric knowledge or sequentially overfits to non-generalizable trajectory-local lessons.",
+      "url": "https://huggingface.co/papers/2603.25158",
+      "pdfUrl": "https://arxiv.org/pdf/2603.25158",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2603.25158/gradient.png",
+      "upvotes": 18,
+      "publishedAt": "2026-03-30T09:09:44.050554+00:00",
+      "fetchedAt": "2026-03-30T09:09:44.050554+00:00",
+      "tags": [],
+      "arxivId": "2603.25158"
+    },
+    {
+      "id": "2603.22782",
+      "title": "Know3D: Prompting 3D Generation with Knowledge from Vision-Language Models",
+      "authors": [
+        "Wenyue Chen,",
+        "Wenjue Chen,",
+        "Peng Li,",
+        "Qinghe Wang,",
+        "Xu Jia,",
+        "Heliang Zheng,",
+        "Rongfei Jia,",
+        "Yuan Liu,",
+        "Ronggang Wang"
+      ],
+      "abstract": "Recent advances in 3D generation have improved the fidelity and geometric details of synthesized 3D assets. However, due to the inherent ambiguity of single-view observations and the lack of robust global structural priors caused by limited 3D training data, the unseen regions generated by existing models are often stochastic and difficult to control, which may sometimes fail to align with user intentions or produce implausible geometries. In this paper, we propose Know3D, a novel framework that incorporates rich knowledge from multimodal large language models into 3D generative processes via latent hidden-state injection , enabling language-controllable generation of the back-view for 3D assets. We utilize a VLM-diffusion-based model , where the VLM is responsible for semantic understanding and guidance. The diffusion model acts as a bridge that transfers semantic knowledge from the VLM to the 3D generation model. In this way, we successfully bridge the gap between abstract textual instructions and the geometric reconstruction of unobserved regions, transforming the traditionally stochastic back-view hallucination into a semantically controllable process , demonstrating a promising direction for future 3D generation models.",
+      "summary": "Recent advances in 3D generation have improved the fidelity and geometric details of synthesized 3D assets. However, due to the inherent ambiguity of single-view observations and the lack of robust global structural priors caused by limited 3D training data, the unseen regions generated by existing models are often stochastic and difficult to control, which may sometimes fail to align with user intentions or produce implausible geometries. In this paper, we propose Know3D, a novel framework that incorporates rich knowledge from multimodal large language models into 3D generative processes via latent hidden-state injection , enabling language-controllable generation of the back-view for 3D assets.",
+      "url": "https://huggingface.co/papers/2603.22782",
+      "pdfUrl": "https://arxiv.org/pdf/2603.22782",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2603.22782/gradient.png",
+      "upvotes": 5,
+      "publishedAt": "2026-03-30T09:09:47.177240+00:00",
+      "fetchedAt": "2026-03-30T09:09:47.177240+00:00",
+      "tags": [],
+      "arxivId": "2603.22782"
+    },
+    {
+      "id": "2603.25750",
+      "title": "Sommelier: Scalable Open Multi-turn Audio Pre-processing for Full-duplex Speech Language Models",
+      "authors": [
+        "Kyudan Jung,",
+        "Jihwan Kim,",
+        "Soyoon Kim,",
+        "Jeongoon Kim,",
+        "Jaegul Choo,",
+        "Cheonbok Park"
+      ],
+      "abstract": "As the paradigm of AI shifts from text-based LLMs to Speech Language Models (SLMs), there is a growing demand for full-duplex systems capable of real-time, natural human-computer interaction. However, the development of such models is constrained by the scarcity of high-quality, multi-speaker conversational data , as existing large-scale resources are predominantly single-speaker or limited in volume. Addressing the complex dynamics of natural dialogue, such as overlapping and back-channeling remains a challenge, with standard processing pipelines suffering from diarization errors and ASR hallucinations . To bridge this gap, we present a robust and scalable open-source data processing pipeline designed for full-duplex model.",
+      "summary": "As the paradigm of AI shifts from text-based LLMs to Speech Language Models (SLMs), there is a growing demand for full-duplex systems capable of real-time, natural human-computer interaction. However, the development of such models is constrained by the scarcity of high-quality, multi-speaker conversational data , as existing large-scale resources are predominantly single-speaker or limited in volume. Addressing the complex dynamics of natural dialogue, such as overlapping and back-channeling remains a challenge, with standard processing pipelines suffering from diarization errors and ASR hallucinations .",
+      "url": "https://huggingface.co/papers/2603.25750",
+      "pdfUrl": "https://arxiv.org/pdf/2603.25750",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2603.25750/gradient.png",
+      "upvotes": 5,
+      "publishedAt": "2026-03-30T09:09:48.321371+00:00",
+      "fetchedAt": "2026-03-30T09:09:48.321371+00:00",
+      "tags": [],
+      "arxivId": "2603.25750"
+    },
+    {
+      "id": "2603.20466",
+      "title": "Diffutron: A Masked Diffusion Language Model for Turkish Language",
+      "authors": [
+        "Şuayp Talha Kocabay,",
+        "Talha Rüzgar Akkuş"
+      ],
+      "abstract": "Masked Diffusion Language Models (MDLMs) have emerged as a compelling non-autoregressive alternative to standard large language models; however, their application to morphologically rich languages remains limited. In this paper, we introduce Diffutron, a masked diffusion language model specifically designed for Turkish. Our approach leverages a resource-efficient training pipeline, starting with LoRA-based continual pre-training of a multilingual encoder on a large-scale corpus. To enable generative capabilities, we employ a progressive instruction-tuning strategy, sequentially adapting the model on general and task-specific instruction sets. Experimental results across comprehensive benchmarks demonstrate that, despite its compact size, our model achieves competitive performance compared to existing multi-billion-parameter baselines. These findings validate the effectiveness of masked diffusion modeling combined with multi-stage tuning for non-autoregressive text generation in Turkish.",
+      "summary": "Masked Diffusion Language Models (MDLMs) have emerged as a compelling non-autoregressive alternative to standard large language models; however, their application to morphologically rich languages remains limited. In this paper, we introduce Diffutron, a masked diffusion language model specifically designed for Turkish. Our approach leverages a resource-efficient training pipeline, starting with LoRA-based continual pre-training of a multilingual encoder on a large-scale corpus.",
+      "url": "https://huggingface.co/papers/2603.20466",
+      "pdfUrl": "https://arxiv.org/pdf/2603.20466",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2603.20466/gradient.png",
+      "upvotes": 2,
+      "publishedAt": "2026-03-30T09:09:49.487464+00:00",
+      "fetchedAt": "2026-03-30T09:09:49.487464+00:00",
+      "tags": [],
+      "arxivId": "2603.20466"
+    },
+    {
+      "id": "2603.24649",
+      "title": "MedOpenClaw: Auditable Medical Imaging Agents Reasoning over Uncurated Full Studies",
+      "authors": [
+        "Weixiang Shen,",
+        "Yanzhu Hu,",
+        "Che Liu,",
+        "Junde Wu,",
+        "Jiayuan Zhu,",
+        "Chengzhi Shen,",
+        "Min Xu,",
+        "Yueming Jin,",
+        "Benedikt Wiestler,",
+        "Daniel Rueckert,"
+      ],
+      "abstract": "Currently, evaluating vision-language models (VLMs) in medical imaging tasks oversimplifies clinical reality by relying on pre-selected 2D images that demand significant manual labor to curate. This setup misses the core challenge of realworld diagnostics: a true clinical agent must actively navigate full 3D volumes across multiple sequences or modalities to gather evidence and ultimately support a final decision. To address this, we propose MEDOPENCLAW, an auditable runtime designed to let VLMs operate dynamically within standard medical tools or viewers (e.g., 3D Slicer). On top of this runtime, we introduce MEDFLOWBENCH, a full-study medical imaging benchmark covering multi-sequence brain MRI and lung CT/PET. It systematically evaluates medical agentic capabilities across viewer-only, tool-use, and open-method tracks. Initial results reveal a critical insight: while state-of-the-art LLMs/VLMs (e.g., Gemini 3.1 Pro and GPT-5.4) can successfully navigate the viewer to solve basic study-level tasks, their performance paradoxically degrades when given access to professional support tools due to a lack of precise spatial grounding . By bridging the gap between static-image perception and interactive clinical workflows , MEDOPENCLAW and MEDFLOWBENCH establish a reproducible foundation for developing auditable, full-study medical imaging agents.",
+      "summary": "Currently, evaluating vision-language models (VLMs) in medical imaging tasks oversimplifies clinical reality by relying on pre-selected 2D images that demand significant manual labor to curate. This setup misses the core challenge of realworld diagnostics: a true clinical agent must actively navigate full 3D volumes across multiple sequences or modalities to gather evidence and ultimately support a final decision. To address this, we propose MEDOPENCLAW, an auditable runtime designed to let VLMs operate dynamically within standard medical tools or viewers (e.g., 3D Slicer).",
+      "url": "https://huggingface.co/papers/2603.24649",
+      "pdfUrl": "https://arxiv.org/pdf/2603.24649",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2603.24649/gradient.png",
+      "upvotes": 0,
+      "publishedAt": "2026-03-30T09:09:50.649535+00:00",
+      "fetchedAt": "2026-03-30T09:09:50.649535+00:00",
+      "tags": [],
+      "arxivId": "2603.24649"
+    }
+  ],
+  "generatedAt": "2026-03-30T09:09:51.649677+00:00"
+}
