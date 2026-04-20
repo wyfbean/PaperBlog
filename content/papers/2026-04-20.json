@@ -1,0 +1,219 @@
+{
+  "date": "2026-04-20",
+  "papers": [
+    {
+      "id": "2604.16044",
+      "title": "Elucidating the SNR-t Bias of Diffusion Probabilistic Models",
+      "authors": [
+        "Meng Yu,",
+        "Lei Sun,",
+        "Jianhao Zeng,",
+        "Xiangxiang Chu,",
+        "Kun Zhan"
+      ],
+      "abstract": "Diffusion Probabilistic Models have demonstrated remarkable performance across a wide range of generative tasks. However, we have observed that these models often suffer from a Signal-to-Noise Ratio-timestep (SNR-t) bias. This bias refers to the misalignment between the SNR of the denoising sample and its corresponding timestep during the inference phase . Specifically, during training, the SNR of a sample is strictly coupled with its timestep. However, this correspondence is disrupted during inference, leading to error accumulation and impairing the generation quality . We provide comprehensive empirical evidence and theoretical analysis to substantiate this phenomenon and propose a simple yet effective differential correction method to mitigate the SNR-t bias. Recognizing that diffusion models typically reconstruct low- frequency components before focusing on high-frequency details during the reverse denoising process , we decompose samples into various frequency components and apply differential correction to each component individually. Extensive experiments show that our approach significantly improves the generation quality of various diffusion models (IDDPM, ADM, DDIM, A-DPM, EA-DPM, EDM, PFGM++, and FLUX) on datasets of various resolutions with negligible computational overhead. The code is at https://github.com/AMAP-ML/DCW.",
+      "summary": "Diffusion Probabilistic Models have demonstrated remarkable performance across a wide range of generative tasks. However, we have observed that these models often suffer from a Signal-to-Noise Ratio-timestep (SNR-t) bias. This bias refers to the misalignment between the SNR of the denoising sample and its corresponding timestep during the inference phase .",
+      "url": "https://huggingface.co/papers/2604.16044",
+      "pdfUrl": "https://arxiv.org/pdf/2604.16044",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.16044/gradient.png",
+      "upvotes": 54,
+      "publishedAt": "2026-04-20T09:56:21.684831+00:00",
+      "fetchedAt": "2026-04-20T09:56:21.684831+00:00",
+      "tags": [],
+      "arxivId": "2604.16044"
+    },
+    {
+      "id": "2502.07408",
+      "title": "Maximal Brain Damage Without Data or Optimization: Disrupting Neural Networks via Sign-Bit Flips",
+      "authors": [
+        "Ido Galil,",
+        "Moshe Kimhi,",
+        "Ran El-Yaniv"
+      ],
+      "abstract": "Deep Neural Networks (DNNs) can be catastrophically disrupted by flipping only a handful of parameter bits . We introduce Deep Neural Lesion (DNL), a data-free and optimizationfree method that locates critical parameters, and an enhanced single-pass variant, 1P-DNL , that refines this selection with one forward and backward pass on random inputs. We show that this vulnerability spans multiple domains, including image classification, object detection , instance segmentation , and reasoning large language models. In image classification, flipping just two sign bits in ResNet-50 on ImageNet reduces accuracy by 99.8%. In object detection and instance segmentation , one or two sign flips in the backbone collapse COCO detection and mask AP for Mask R-CNN and YOLOv8-seg models. In language modeling , two sign flips into different experts reduce Qwen3-30B-A3B-Thinking from 78% to 0% accuracy. We also show that selectively protecting a small fraction of vulnerable sign bits provides a practical defense against such attacks.",
+      "summary": "Deep Neural Networks (DNNs) can be catastrophically disrupted by flipping only a handful of parameter bits . We introduce Deep Neural Lesion (DNL), a data-free and optimizationfree method that locates critical parameters, and an enhanced single-pass variant, 1P-DNL , that refines this selection with one forward and backward pass on random inputs. We show that this vulnerability spans multiple domains, including image classification, object detection , instance segmentation , and reasoning large language models.",
+      "url": "https://huggingface.co/papers/2502.07408",
+      "pdfUrl": "https://arxiv.org/pdf/2502.07408",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2502.07408/gradient.png",
+      "upvotes": 23,
+      "publishedAt": "2026-04-20T09:56:22.841915+00:00",
+      "fetchedAt": "2026-04-20T09:56:22.841915+00:00",
+      "tags": [],
+      "arxivId": "2502.07408"
+    },
+    {
+      "id": "2604.13074",
+      "title": "PersonaVLM: Long-Term Personalized Multimodal LLMs",
+      "authors": [
+        "Chang Nie,",
+        "Chaoyou Fu,",
+        "Yifan Zhang,",
+        "Haihua Yang,",
+        "Caifeng Shan"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) serve as daily assistants for millions. However, their ability to generate responses aligned with individual preferences remains limited. Prior approaches enable only static, single-turn personalization through input augmentation or output alignment, and thus fail to capture users' evolving preferences and personality over time (see Fig.1). In this paper, we introduce PersonaVLM, an innovative personalized multimodal agent framework designed for long-term personalization . It transforms a general-purpose MLLM into a personalized assistant by integrating three key capabilities: (a) Remembering: It proactively extracts and summarizes chronological multimodal memories from interactions, consolidating them into a personalized database . (b) Reasoning: It conducts multi-turn reasoning by retrieving and integrating relevant memories from the database. (c) Response Alignment : It infers the user's evolving personality throughout long-term interactions to ensure outputs remain aligned with their unique characteristics. For evaluation, we establish Persona-MME, a comprehensive benchmark comprising over 2,000 curated interaction cases, designed to assess long-term MLLM personalization across seven key aspects and 14 fine-grained tasks. Extensive experiments validate our method's effectiveness, improving the baseline by 22.4% (Persona-MME) and 9.8% (PERSONAMEM) under a 128k context, while outperforming GPT-4o by 5.2% and 2.0%, respectively. Project page: https://PersonaVLM.github.io.",
+      "summary": "Multimodal Large Language Models (MLLMs) serve as daily assistants for millions. However, their ability to generate responses aligned with individual preferences remains limited. Prior approaches enable only static, single-turn personalization through input augmentation or output alignment, and thus fail to capture users' evolving preferences and personality over time (see Fig.1).",
+      "url": "https://huggingface.co/papers/2604.13074",
+      "pdfUrl": "https://arxiv.org/pdf/2604.13074",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.13074/gradient.png",
+      "upvotes": 20,
+      "publishedAt": "2026-04-20T09:56:24.059636+00:00",
+      "fetchedAt": "2026-04-20T09:56:24.059636+00:00",
+      "tags": [],
+      "arxivId": "2604.13074"
+    },
+    {
+      "id": "2604.04936",
+      "title": "Web Retrieval-Aware Chunking (W-RAC) for Efficient and Cost-Effective Retrieval-Augmented Generation Systems",
+      "authors": [
+        "Uday Allu,",
+        "Sonu Kedia,",
+        "Tanmay Odapally,",
+        "Biddwan Ahmed"
+      ],
+      "abstract": "Retrieval-Augmented Generation (RAG) systems critically depend on effective document chunking strategies to balance retrieval quality, latency, and operational cost. Traditional chunking approaches, such as fixed-size, rule-based, or fully agentic chunking, often suffer from high token consumption , redundant text generation, limited scalability, and poor debuggability, especially for large-scale web content ingestion. In this paper, we propose Web Retrieval-Aware Chunking (W-RAC), a novel, cost-efficient chunking framework designed specifically for web-based documents . W-RAC decouples text extraction from semantic chunk planning by representing parsed web content as structured, ID-addressable units and leveraging large language models (LLMs) only for retrieval-aware grouping decisions rather than text generation. This significantly reduces token usage, eliminates hallucination risks , and improves system observability.Experimental analysis and architectural comparison demonstrate that W-RAC achieves comparable or better retrieval performance than traditional chunking approaches while reducing chunking-related LLM costs by an order of magnitude.",
+      "summary": "Retrieval-Augmented Generation (RAG) systems critically depend on effective document chunking strategies to balance retrieval quality, latency, and operational cost. Traditional chunking approaches, such as fixed-size, rule-based, or fully agentic chunking, often suffer from high token consumption , redundant text generation, limited scalability, and poor debuggability, especially for large-scale web content ingestion. In this paper, we propose Web Retrieval-Aware Chunking (W-RAC), a novel, cost-efficient chunking framework designed specifically for web-based documents .",
+      "url": "https://huggingface.co/papers/2604.04936",
+      "pdfUrl": "https://arxiv.org/pdf/2604.04936",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.04936/gradient.png",
+      "upvotes": 18,
+      "publishedAt": "2026-04-20T09:56:25.217714+00:00",
+      "fetchedAt": "2026-04-20T09:56:25.217714+00:00",
+      "tags": [],
+      "arxivId": "2604.04936"
+    },
+    {
+      "id": "2604.16029",
+      "title": "Cut Your Losses! Learning to Prune Paths Early for Efficient Parallel Reasoning",
+      "authors": [
+        "Jiaxi Bi,",
+        "Tongxu Luo,",
+        "Wenyu Du,",
+        "Zhengyang Tang,",
+        "Benyou Wang"
+      ],
+      "abstract": "Parallel reasoning enhances Large Reasoning Models (LRMs) but incurs prohibitive costs due to futile paths caused by early errors. To mitigate this, path pruning at the prefix level is essential, yet existing research remains fragmented without a standardized framework. In this work, we propose the first systematic taxonomy of path pruning , categorizing methods by their signal source (internal vs. external) and learnability (learnable vs. non-learnable). This classification reveals the unexplored potential of learnable internal methods, motivating our proposal of STOP (Super TOken for Pruning). Extensive evaluations across LRMs ranging from 1.5B to 20B parameters demonstrate that STOP achieves superior effectiveness and efficiency compared to existing baselines. Furthermore, we rigorously validate the scalability of STOP under varying compute budgets - for instance, boosting GPT-OSS-20B accuracy on AIME25 from 84% to nearly 90% under fixed compute budgets. Finally, we distill our findings into formalized empirical guidelines to facilitate optimal real-world deployment. Code, data and models are available at https://bijiaxihh.github.io/STOP",
+      "summary": "Parallel reasoning enhances Large Reasoning Models (LRMs) but incurs prohibitive costs due to futile paths caused by early errors. To mitigate this, path pruning at the prefix level is essential, yet existing research remains fragmented without a standardized framework. In this work, we propose the first systematic taxonomy of path pruning , categorizing methods by their signal source (internal vs.",
+      "url": "https://huggingface.co/papers/2604.16029",
+      "pdfUrl": "https://arxiv.org/pdf/2604.16029",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.16029/gradient.png",
+      "upvotes": 17,
+      "publishedAt": "2026-04-20T09:56:26.383396+00:00",
+      "fetchedAt": "2026-04-20T09:56:26.383396+00:00",
+      "tags": [],
+      "arxivId": "2604.16029"
+    },
+    {
+      "id": "2604.15804",
+      "title": "Qwen3.5-Omni Technical Report",
+      "authors": [
+        "Qwen Team"
+      ],
+      "abstract": "In this work, we present Qwen3.5-Omni, the latest advancement in the Qwen-Omni model family. Representing a significant evolution over its predecessor, Qwen3.5-Omni scales to hundreds of billions of parameters and supports a 256k context length. By leveraging a massive dataset comprising heterogeneous text-vision pairs and over 100 million hours of audio-visual content, the model demonstrates robust omni-modality capabilities. Qwen3.5-Omni-plus achieves SOTA results across 215 audio and audio-visual understanding , reasoning, and interaction subtasks and benchmarks, surpassing Gemini-3.1 Pro in key audio tasks and matching it in comprehensive audio-visual understanding . Architecturally, Qwen3.5-Omni employs a Hybrid Attention Mixture-of-Experts ( MoE ) framework for both Thinker and Talker, enabling efficient long-sequence inference. The model facilitates sophisticated interaction, supporting over 10 hours of audio understanding and 400 seconds of 720P video (at 1 FPS). To address the inherent instability and unnaturalness in streaming speech synthesis , often caused by encoding efficiency discrepancies between text and speech tokenizers, we introduce ARIA . ARIA dynamically aligns text and speech units, significantly enhancing the stability and prosody of conversational speech with minimal latency impact. Furthermore, Qwen3.5-Omni expands linguistic boundaries, supporting multilingual understanding and speech generation across 10 languages with human-like emotional nuance. Finally, Qwen3.5-Omni exhibits superior audio-visual grounding capabilities, generating script-level structured captions with precise temporal synchronization and automated scene segmentation. Remarkably, we observed the emergence of a new capability in omnimodal models: directly performing coding based on audio-visual instructions, which we call Audio-Visual Vibe Coding .",
+      "summary": "In this work, we present Qwen3.5-Omni, the latest advancement in the Qwen-Omni model family. Representing a significant evolution over its predecessor, Qwen3.5-Omni scales to hundreds of billions of parameters and supports a 256k context length. By leveraging a massive dataset comprising heterogeneous text-vision pairs and over 100 million hours of audio-visual content, the model demonstrates robust omni-modality capabilities.",
+      "url": "https://huggingface.co/papers/2604.15804",
+      "pdfUrl": "https://arxiv.org/pdf/2604.15804",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.15804/gradient.png",
+      "upvotes": 13,
+      "publishedAt": "2026-04-20T09:56:27.535769+00:00",
+      "fetchedAt": "2026-04-20T09:56:27.535769+00:00",
+      "tags": [],
+      "arxivId": "2604.15804"
+    },
+    {
+      "id": "2604.16299",
+      "title": "Repurposing 3D Generative Model for Autoregressive Layout Generation",
+      "authors": [
+        "Haoran Feng,",
+        "Yifan Niu,",
+        "Zehuan Huang,",
+        "Yang-Tian Sun,",
+        "Chunchao Guo,",
+        "Yuxin Peng,",
+        "Lu Sheng"
+      ],
+      "abstract": "We introduce LaviGen, a framework that repurposes 3D generative models for 3D layout generation . Unlike previous methods that infer object layouts from textual descriptions, LaviGen operates directly in the native 3D space, formulating layout generation as an autoregressive process that explicitly models geometric relations and physical constraints among objects, producing coherent and physically plausible 3D scenes. To further enhance this process, we propose an adapted 3D diffusion model that integrates scene, object, and instruction information and employs a dual-guidance self-rollout distillation mechanism to improve efficiency and spatial accuracy. Extensive experiments on the LayoutVLM benchmark show LaviGen achieves superior 3D layout generation performance, with 19% higher physical plausibility than the state of the art and 65% faster computation. Our code is publicly available at https://github.com/fenghora/LaviGen.",
+      "summary": "We introduce LaviGen, a framework that repurposes 3D generative models for 3D layout generation . Unlike previous methods that infer object layouts from textual descriptions, LaviGen operates directly in the native 3D space, formulating layout generation as an autoregressive process that explicitly models geometric relations and physical constraints among objects, producing coherent and physically plausible 3D scenes. To further enhance this process, we propose an adapted 3D diffusion model that integrates scene, object, and instruction information and employs a dual-guidance self-rollout distillation mechanism to improve efficiency and spatial accuracy.",
+      "url": "https://huggingface.co/papers/2604.16299",
+      "pdfUrl": "https://arxiv.org/pdf/2604.16299",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.16299/gradient.png",
+      "upvotes": 9,
+      "publishedAt": "2026-04-20T09:56:28.702304+00:00",
+      "fetchedAt": "2026-04-20T09:56:28.702304+00:00",
+      "tags": [],
+      "arxivId": "2604.16299"
+    },
+    {
+      "id": "2604.14568",
+      "title": "Learning Adaptive Reasoning Paths for Efficient Visual Reasoning",
+      "authors": [
+        "Yixu Huang,",
+        "Tinghui Zhu,",
+        "Muhao Chen"
+      ],
+      "abstract": "Visual reasoning models (VRMs) have recently shown strong cross-modal reasoning capabilities by integrating visual perception with language reasoning. However, they often suffer from overthinking, producing unnecessarily long reasoning chains for any tasks. We attribute this issue to Reasoning Path Redundancy in visual reasoning: many visual questions do not require the full reasoning process. To address this, we propose AVR, an adaptive visual reasoning framework that decomposes visual reasoning into three cognitive functions: visual perception , logical reasoning , and answer application . It further enables models to dynamically choose among three response formats: Full Format, Perception-Only Format, and Direct Answer. AVR is trained with FS-GRPO , an adaptation of Group Relative Policy Optimization that encourages the model to select the most efficient reasoning format while preserving correctness. Experiments on multiple vision-language benchmarks show that AVR reduces token usage by 50--90\\% while maintaining overall accuracy, especially in perception-intensive tasks. These results demonstrate that adaptive visual reasoning can effectively mitigate overthinking in VRMs. Code and data are available at: https://github.com/RunRiotComeOn/AVR.",
+      "summary": "Visual reasoning models (VRMs) have recently shown strong cross-modal reasoning capabilities by integrating visual perception with language reasoning. However, they often suffer from overthinking, producing unnecessarily long reasoning chains for any tasks. We attribute this issue to Reasoning Path Redundancy in visual reasoning: many visual questions do not require the full reasoning process.",
+      "url": "https://huggingface.co/papers/2604.14568",
+      "pdfUrl": "https://arxiv.org/pdf/2604.14568",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.14568/gradient.png",
+      "upvotes": 4,
+      "publishedAt": "2026-04-20T09:56:29.854596+00:00",
+      "fetchedAt": "2026-04-20T09:56:29.854596+00:00",
+      "tags": [],
+      "arxivId": "2604.14568"
+    },
+    {
+      "id": "2604.15453",
+      "title": "(1D) Ordered Tokens Enable Efficient Test-Time Search",
+      "authors": [
+        "Zhitong Gao,",
+        "Parham Rezaei,",
+        "Ali Cy,",
+        "Mingqiao Ye,",
+        "Nataša Jovanović,",
+        "Jesse Allardice,",
+        "Afshin Dehghan,",
+        "Amir Zamir,",
+        "Roman Bachmann,",
+        "Oğuzhan Fatih Kar"
+      ],
+      "abstract": "Tokenization is a key component of autoregressive (AR) generative models, converting raw data into more manageable units for modeling. Commonly, tokens describe local information, such as regions of pixels in images or word pieces in text, and AR generation predicts these tokens in a fixed order. A worthwhile question is whether token structures affect the ability to steer the generation through test-time search , where multiple candidate generations are explored and evaluated by a verifier. Using image generation as our testbed, we hypothesize that recent 1D ordered tokenizers with coarse-to-fine structure can be more amenable to search than classical 2D grid structures. This is rooted in the fact that the intermediate states in coarse-to-fine sequences carry semantic meaning that verifiers can reliably evaluate, enabling effective steering during generation.\n  Through controlled experiments, we find that AR models trained on coarse-to-fine ordered tokens exhibit improved test-time scaling behavior compared to grid-based counterparts. Moreover, we demonstrate that, thanks to the ordered structure, pure test-time search over token sequences (i.e., without training an AR model) can perform training-free text-to-image generation when guided by an image-text verifier . Beyond this, we systematically study how classical search algorithms ( best-of-N , beam search , lookahead search ) interact with different token structures, as well as the role of different verifiers and AR priors. Our results highlight the impact of token structure on inference-time scalability and provide practical guidance for test-time scaling in AR models.",
+      "summary": "Tokenization is a key component of autoregressive (AR) generative models, converting raw data into more manageable units for modeling. Commonly, tokens describe local information, such as regions of pixels in images or word pieces in text, and AR generation predicts these tokens in a fixed order. A worthwhile question is whether token structures affect the ability to steer the generation through test-time search , where multiple candidate generations are explored and evaluated by a verifier.",
+      "url": "https://huggingface.co/papers/2604.15453",
+      "pdfUrl": "https://arxiv.org/pdf/2604.15453",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.15453/gradient.png",
+      "upvotes": 3,
+      "publishedAt": "2026-04-20T09:56:31.002698+00:00",
+      "fetchedAt": "2026-04-20T09:56:31.002698+00:00",
+      "tags": [],
+      "arxivId": "2604.15453"
+    },
+    {
+      "id": "2604.12012",
+      "title": "TIPSv2: Advancing Vision-Language Pretraining with Enhanced Patch-Text Alignment",
+      "authors": [
+        "Bingyi Cao,",
+        "Koert Chen,",
+        "Kevis-Kokitsi Maninis,",
+        "Kaifeng Chen,",
+        "Arjun Karpur,",
+        "Ye Xia,",
+        "Sahil Dua,",
+        "Tanmaya Dabral,",
+        "Guangxing Han,",
+        "Bohyung Han,"
+      ],
+      "abstract": "Recent progress in vision-language pretraining has enabled significant improvements to many downstream computer vision applications, such as classification, retrieval, segmentation and depth prediction. However, a fundamental capability that these models still struggle with is aligning dense patch representations with text embeddings of corresponding concepts. In this work, we investigate this critical issue and propose novel techniques to enhance this capability in foundational vision-language models. First, we reveal that a patch-level distillation procedure significantly boosts dense patch-text alignment -- surprisingly, the patch-text alignment of the distilled student model strongly surpasses that of the teacher model. This observation inspires us to consider modifications to pretraining recipes, leading us to propose iBOT++ , an upgrade to the commonly-used iBOT masked image objective , where unmasked tokens also contribute directly to the loss. This dramatically enhances patch-text alignment of pretrained models. Additionally, to improve vision-language pretraining efficiency and effectiveness, we modify the exponential moving average setup in the learning recipe, and introduce a caption sampling strategy to benefit from synthetic captions at different granularities. Combining these components, we develop TIPSv2, a new family of image-text encoder models suitable for a wide range of downstream applications . Through comprehensive experiments on 9 tasks and 20 datasets, we demonstrate strong performance, generally on par with or better than recent vision encoder models. Code and models are released via our project page at https://gdm-tipsv2.github.io/ .",
+      "summary": "Recent progress in vision-language pretraining has enabled significant improvements to many downstream computer vision applications, such as classification, retrieval, segmentation and depth prediction. However, a fundamental capability that these models still struggle with is aligning dense patch representations with text embeddings of corresponding concepts. In this work, we investigate this critical issue and propose novel techniques to enhance this capability in foundational vision-language models.",
+      "url": "https://huggingface.co/papers/2604.12012",
+      "pdfUrl": "https://arxiv.org/pdf/2604.12012",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.12012/gradient.png",
+      "upvotes": 3,
+      "publishedAt": "2026-04-20T09:56:32.163505+00:00",
+      "fetchedAt": "2026-04-20T09:56:32.163505+00:00",
+      "tags": [],
+      "arxivId": "2604.12012"
+    }
+  ],
+  "generatedAt": "2026-04-20T09:56:33.163692+00:00"
+}
