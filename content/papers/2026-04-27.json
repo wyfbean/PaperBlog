@@ -1,0 +1,220 @@
+{
+  "date": "2026-04-27",
+  "papers": [
+    {
+      "id": "2604.22748",
+      "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
+      "authors": [
+        "Meng Chu,",
+        "Xuan Billy Zhang,",
+        "Kevin Qinghong Lin,",
+        "Lingdong Kong,",
+        "Jize Zhang,",
+        "Teng Tu,",
+        "Weijian Ma,",
+        "Ziqi Huang,",
+        "Senqiao Yang,",
+        "Wei Huang,"
+      ],
+      "abstract": "As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, coordinate with others, or design experiments require predictive environment models , yet the term world model carries different meanings across research communities. We introduce a \"levels x laws\" taxonomy organized along two axes. The first defines three capability levels: L1 Predictor , which learns one-step local transition operators; L2 Simulator , which composes them into multi-step, action-conditioned rollouts that respect domain laws ; and L3 Evolver , which autonomously revises its own model when predictions fail against new evidence. The second identifies four governing-law regimes: physical, digital, social, and scientific. These regimes determine what constraints a world model must satisfy and where it is most likely to fail. Using this framework, we synthesize over 400 works and summarize more than 100 representative systems spanning model-based reinforcement learning , video generation , web and GUI agents , multi-agent social simulation , and AI-driven scientific discovery . We analyze methods, failure modes , and evaluation practices across level-regime pairs, propose decision-centric evaluation principles and a minimal reproducible evaluation package, and outline architectural guidance , open problems , and governance challenges . The resulting roadmap connects previously isolated communities and charts a path from passive next-step prediction toward world model s that can simulate, and ultimately reshape, the environments in which agents operate.",
+      "summary": "As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, coordinate with others, or design experiments require predictive environment models , yet the term world model carries different meanings across research communities. We introduce a \"levels x laws\" taxonomy organized along two axes.",
+      "url": "https://huggingface.co/papers/2604.22748",
+      "pdfUrl": "https://arxiv.org/pdf/2604.22748",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.22748/gradient.png",
+      "upvotes": 106,
+      "publishedAt": "2026-04-27T10:12:21.354322+00:00",
+      "fetchedAt": "2026-04-27T10:12:21.354322+00:00",
+      "tags": [],
+      "arxivId": "2604.22748"
+    },
+    {
+      "id": "2604.21518",
+      "title": "DiffNR: Diffusion-Enhanced Neural Representation Optimization for Sparse-View 3D Tomographic Reconstruction",
+      "authors": [
+        "Shiyan Su,",
+        "Ruyi Zha,",
+        "Danli Shi,",
+        "Hongdong Li,",
+        "Xuelian Cheng"
+      ],
+      "abstract": "Neural representations (NRs), such as neural fields and 3D Gaussians , effectively model volumetric data in computed tomography (CT) but suffer from severe artifacts under sparse-view settings . To address this, we propose DiffNR, a novel framework that enhances NR optimization with diffusion priors . At its core is SliceFixer , a single-step diffusion model designed to correct artifacts in degraded slices. We integrate specialized conditioning layers into the network and develop tailored data curation strategies to support model finetuning. During reconstruction, SliceFixer periodically generates pseudo-reference volumes , providing auxiliary 3D perceptual supervision to fix underconstrained regions. Compared to prior methods that embed CT solvers into time-consuming iterative denoising, our repair-and-augment strategy avoids frequent diffusion model queries, leading to better runtime performance. Extensive experiments show that DiffNR improves PSNR by 3.99 dB on average, generalizes well across domains, and maintains efficient optimization.",
+      "summary": "Neural representations (NRs), such as neural fields and 3D Gaussians , effectively model volumetric data in computed tomography (CT) but suffer from severe artifacts under sparse-view settings . To address this, we propose DiffNR, a novel framework that enhances NR optimization with diffusion priors . At its core is SliceFixer , a single-step diffusion model designed to correct artifacts in degraded slices.",
+      "url": "https://huggingface.co/papers/2604.21518",
+      "pdfUrl": "https://arxiv.org/pdf/2604.21518",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.21518/gradient.png",
+      "upvotes": 25,
+      "publishedAt": "2026-04-27T10:12:22.458684+00:00",
+      "fetchedAt": "2026-04-27T10:12:22.458684+00:00",
+      "tags": [],
+      "arxivId": "2604.21518"
+    },
+    {
+      "id": "2604.18519",
+      "title": "LLM Safety From Within: Detecting Harmful Content with Internal Representations",
+      "authors": [
+        "Difan Jiao,",
+        "Yilun Liu,",
+        "Ye Yuan,",
+        "Zhenwei Tang,",
+        "Linfeng Du,",
+        "Haolun Wu,",
+        "Ashton Anderson"
+      ],
+      "abstract": "Guard models are widely used to detect harmful content in user prompts and LLM responses. However, state-of-the-art guard models rely solely on terminal-layer representations and overlook the rich safety-relevant features distributed across internal layers . We present SIREN, a lightweight guard model that harnesses these internal features. By identifying safety neurons via linear probing and combining them through an adaptive layer-weighted strategy , SIREN builds a harmfulness detector from LLM internals without modifying the underlying model. Our comprehensive evaluation shows that SIREN substantially outperforms state-of-the-art open-source guard models across multiple benchmarks while using 250 times fewer trainable parameters . Moreover, SIREN exhibits superior generalization to unseen benchmarks, naturally enables real-time streaming detection , and significantly improves inference efficiency compared to generative guard models . Overall, our results highlight LLM internal states as a promising foundation for practical, high-performance harmfulness detection.",
+      "summary": "Guard models are widely used to detect harmful content in user prompts and LLM responses. However, state-of-the-art guard models rely solely on terminal-layer representations and overlook the rich safety-relevant features distributed across internal layers . We present SIREN, a lightweight guard model that harnesses these internal features.",
+      "url": "https://huggingface.co/papers/2604.18519",
+      "pdfUrl": "https://arxiv.org/pdf/2604.18519",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.18519/gradient.png",
+      "upvotes": 17,
+      "publishedAt": "2026-04-27T10:12:23.579149+00:00",
+      "fetchedAt": "2026-04-27T10:12:23.579149+00:00",
+      "tags": [],
+      "arxivId": "2604.18519"
+    },
+    {
+      "id": "2604.22586",
+      "title": "FlowAnchor: Stabilizing the Editing Signal for Inversion-Free Video Editing",
+      "authors": [
+        "Ze Chen,",
+        "Lan Chen,",
+        "Yuanhang Li,",
+        "Qi Mao"
+      ],
+      "abstract": "We propose FlowAnchor, a training-free framework for stable and efficient inversion-free, flow-based video editing . Inversion-free editing methods have recently shown impressive efficiency and structure preservation in images by directly steering the sampling trajectory with an editing signal. However, extending this paradigm to videos remains challenging, often failing in multi-object scenes or with increased frame counts. We identify the root cause as the instability of the editing signal in high-dimensional video latent spaces , which arises from imprecise spatial localization and length-induced magnitude attenuation. To overcome this challenge, FlowAnchor explicitly anchors both where to edit and how strongly to edit. It introduces Spatial-aware Attention Refinement , which enforces consistent alignment between textual guidance and spatial regions, and Adaptive Magnitude Modulation , which adaptively preserves sufficient editing strength. Together, these mechanisms stabilize the editing signal and guide the flow-based evolution toward the desired target distribution. Extensive experiments demonstrate that FlowAnchor achieves more faithful, temporally coherent, and computationally efficient video editing across challenging multi-object and fast-motion scenarios. The project page is available at https://cuc-mipg.github.io/FlowAnchor.github.io/.",
+      "summary": "We propose FlowAnchor, a training-free framework for stable and efficient inversion-free, flow-based video editing . Inversion-free editing methods have recently shown impressive efficiency and structure preservation in images by directly steering the sampling trajectory with an editing signal. However, extending this paradigm to videos remains challenging, often failing in multi-object scenes or with increased frame counts.",
+      "url": "https://huggingface.co/papers/2604.22586",
+      "pdfUrl": "https://arxiv.org/pdf/2604.22586",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.22586/gradient.png",
+      "upvotes": 9,
+      "publishedAt": "2026-04-27T10:12:24.692601+00:00",
+      "fetchedAt": "2026-04-27T10:12:24.692601+00:00",
+      "tags": [],
+      "arxivId": "2604.22586"
+    },
+    {
+      "id": "2604.22294",
+      "title": "Contexts are Never Long Enough: Structured Reasoning for Scalable Question Answering over Long Document Sets",
+      "authors": [
+        "Harshit Joshi,",
+        "Priyank Shethia,",
+        "Jadelynn Dao,",
+        "Monica S. Lam"
+      ],
+      "abstract": "Real-world document question answering is challenging. Analysts must synthesize evidence across multiple documents and different parts of each document. However, any fixed LLM context window can be exceeded as document collections grow. A common workaround is to decompose documents into chunks and assemble answers from chunk-level outputs , but this introduces an aggregation bottleneck : as the number of chunks grows, systems must still combine and reason over an increasingly large body of extracted evidence. We present SLIDERS, a framework for question answering over long document collections through structured reasoning . SLIDERS extracts salient information into a relational database , enabling scalable reasoning over persistent structured state via SQL rather than concatenated text. To make this locally extracted representation globally coherent, SLIDERS introduces a data reconciliation stage that leverages provenance , extraction rationales , and metadata to detect and repair duplicated, inconsistent, and incomplete records. SLIDERS outperforms all baselines on three existing long-context benchmarks, despite all of them fitting within the context window of strong base LLMs, exceeding GPT-4.1 by 6.6 points on average. It also improves over the next best baseline by ~19 and ~32 points on two new benchmarks at 3.9M and 36M tokens, respectively.",
+      "summary": "Real-world document question answering is challenging. Analysts must synthesize evidence across multiple documents and different parts of each document. However, any fixed LLM context window can be exceeded as document collections grow.",
+      "url": "https://huggingface.co/papers/2604.22294",
+      "pdfUrl": "https://arxiv.org/pdf/2604.22294",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.22294/gradient.png",
+      "upvotes": 6,
+      "publishedAt": "2026-04-27T10:12:25.790597+00:00",
+      "fetchedAt": "2026-04-27T10:12:25.790597+00:00",
+      "tags": [],
+      "arxivId": "2604.22294"
+    },
+    {
+      "id": "2604.22436",
+      "title": "AgentSearchBench: A Benchmark for AI Agent Search in the Wild",
+      "authors": [
+        "Bin Wu,",
+        "Arastun Mammadli,",
+        "Xiaoyu Zhang,",
+        "Emine Yilmaz"
+      ],
+      "abstract": "The rapid growth of AI agent ecosystems is transforming how complex tasks are delegated and executed, creating a new challenge of identifying suitable agents for a given task. Unlike traditional tools, agent capabilities are often compositional and execution-dependent, making them difficult to assess from textual descriptions alone. However, existing research and benchmarks typically assume well-specified functionalities, controlled candidate pools, or only executable task queries, leaving realistic agent search scenarios insufficiently studied. We introduce AgentSearchBench, a large-scale benchmark for agent search in the wild, built from nearly 10,000 real-world agents across multiple providers. The benchmark formalizes agent search as retrieval and reranking problems under both executable task queries and high-level task descriptions, and evaluates relevance using execution-grounded performance signals . Experiments reveal a consistent gap between semantic similarity and actual agent performance, exposing the limitations of description-based retrieval and reranking methods. We further show that lightweight behavioral signals , including execution-aware probing , can substantially improve ranking quality, highlighting the importance of incorporating execution signals into agent discovery. Our code is available at https://github.com/Bingo-W/AgentSearchBench.",
+      "summary": "The rapid growth of AI agent ecosystems is transforming how complex tasks are delegated and executed, creating a new challenge of identifying suitable agents for a given task. Unlike traditional tools, agent capabilities are often compositional and execution-dependent, making them difficult to assess from textual descriptions alone. However, existing research and benchmarks typically assume well-specified functionalities, controlled candidate pools, or only executable task queries, leaving realistic agent search scenarios insufficiently studied.",
+      "url": "https://huggingface.co/papers/2604.22436",
+      "pdfUrl": "https://arxiv.org/pdf/2604.22436",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.22436/gradient.png",
+      "upvotes": 5,
+      "publishedAt": "2026-04-27T10:12:27.181129+00:00",
+      "fetchedAt": "2026-04-27T10:12:27.181129+00:00",
+      "tags": [],
+      "arxivId": "2604.22436"
+    },
+    {
+      "id": "2604.22152",
+      "title": "dWorldEval: Scalable Robotic Policy Evaluation via Discrete Diffusion World Model",
+      "authors": [
+        "Yaxuan Li,",
+        "Zhongyi Zhou,",
+        "Yefei Chen,",
+        "Yaokai Xue,",
+        "Yichen Zhu"
+      ],
+      "abstract": "Evaluating robotics policies across thousands of environments and thousands of tasks is infeasible with existing approaches. This motivates the need for a new methodology for scalable robotics policy evaluation. In this paper, we propose dWorldEval, which uses a discrete diffusion world model as a scalable evaluation proxy for robotics policies. Specifically, dWorldEval maps all modalities - including vision, language, and robotic actions - into a unified token space , modeling them via a single transformer-based denoising network . In this paper, we propose dWorldEval, using a discrete diffusion world model as a scalable evaluation proxy for robotics policy. Specifically, it maps all modalities, including vision, language, and robotics action into a unified token space , then denoises them with a single transformer network. Building on this architecture, we employ a sparse keyframe memory to maintain spatiotemporal consistency. We also introduce a progress token that indicates the degree of task completion. At inference, the model jointly predicts future observations and progress token , allowing automatically determine success when the progress reaches 1. Extensive experiments demonstrate that dWorldEval significantly outperforms previous approaches, i.e., WorldEval, Ctrl-World, and WorldGym, on LIBERO, RoboTwin, and multiple real-robot tasks. It paves the way for a new architectural paradigm in building world simulator s for robotics evaluation at scale.",
+      "summary": "Evaluating robotics policies across thousands of environments and thousands of tasks is infeasible with existing approaches. This motivates the need for a new methodology for scalable robotics policy evaluation. In this paper, we propose dWorldEval, which uses a discrete diffusion world model as a scalable evaluation proxy for robotics policies.",
+      "url": "https://huggingface.co/papers/2604.22152",
+      "pdfUrl": "https://arxiv.org/pdf/2604.22152",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.22152/gradient.png",
+      "upvotes": 1,
+      "publishedAt": "2026-04-27T10:12:28.366932+00:00",
+      "fetchedAt": "2026-04-27T10:12:28.366932+00:00",
+      "tags": [],
+      "arxivId": "2604.22152"
+    },
+    {
+      "id": "2604.21718",
+      "title": "Building a Precise Video Language with Human-AI Oversight",
+      "authors": [
+        "Zhiqiu Lin,",
+        "Chancharik Mitra,",
+        "Siyuan Cen,",
+        "Isaac Li,",
+        "Yuhan Huang,",
+        "Yu Tong Tiffany Ling,",
+        "Hewei Wang,",
+        "Irene Pi,",
+        "Shihang Zhu,",
+        "Ryan Rao,"
+      ],
+      "abstract": "Video-language models (VLMs) learn to reason about the dynamic visual world through natural language. We introduce a suite of open datasets, benchmarks, and recipes for scalable oversight that enable precise video captioning . First, we define a structured specification for describing subjects, scenes, motion, spatial, and camera dynamics, grounded by hundreds of carefully defined visual primitives developed with professional video creators such as filmmakers. Next, to curate high-quality captions, we introduce CHAI ( Critique-based Human-AI Oversight ), a framework where trained experts critique and revise model-generated pre-captions into improved post-captions. This division of labor improves annotation accuracy and efficiency by offloading text generation to models, allowing humans to better focus on verification. Additionally, these critiques and preferences between pre- and post-captions provide rich supervision for improving open-source models (Qwen3-VL) on caption generation, reward modeling , and critique generation through SFT , DPO , and inference-time scaling . Our ablations show that critique quality in precision, recall, and constructiveness, ensured by our oversight framework, directly governs downstream performance. With modest expert supervision, the resulting model outperforms closed-source models such as Gemini-3.1-Pro. Finally, we apply our approach to re-caption large-scale professional videos (e.g., films, commercials, games) and fine-tune video generation models such as Wan to better follow detailed prompts of up to 400 words, achieving finer control over cinematography including camera motion, angle, lens, focus, point of view, and framing. Our results show that precise specification and human-AI oversight are key to professional-level video understanding and generation. Data and code are available on our project page: https://linzhiqiu.github.io/papers/ chai /",
+      "summary": "Video-language models (VLMs) learn to reason about the dynamic visual world through natural language. We introduce a suite of open datasets, benchmarks, and recipes for scalable oversight that enable precise video captioning . First, we define a structured specification for describing subjects, scenes, motion, spatial, and camera dynamics, grounded by hundreds of carefully defined visual primitives developed with professional video creators such as filmmakers.",
+      "url": "https://huggingface.co/papers/2604.21718",
+      "pdfUrl": "https://arxiv.org/pdf/2604.21718",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.21718/gradient.png",
+      "upvotes": 1,
+      "publishedAt": "2026-04-27T10:12:29.509343+00:00",
+      "fetchedAt": "2026-04-27T10:12:29.509343+00:00",
+      "tags": [],
+      "arxivId": "2604.21718"
+    },
+    {
+      "id": "2604.18580",
+      "title": "Sessa: Selective State Space Attention",
+      "authors": [
+        "Liubomyr Horbatko"
+      ],
+      "abstract": "Modern sequence modeling is dominated by two families: Transformers , whose self-attention can access arbitrary elements of the visible sequence, and structured state-space models , which propagate information through an explicit recurrent state . These mechanisms face different limitations on long contexts: when attention is diffuse, the influence of individual tokens is diluted across the effective support, while recurrent state propagation can lose long-range sensitivity unless information is actively preserved. As a result, both mechanisms face challenges in preserving and selectively retrieving information over long contexts. We propose Sessa , a decoder that places attention inside a recurrent feedback path . This creates many attention-based paths through which past tokens can influence future states, rather than relying on a single attention read or a single recurrent chain. We prove that, under explicit assumptions and matched regimes, Sessa admits power-law memory tails O(ell^{-β}) for 0 < β< 1, with slower decay than in the corresponding Transformer and Mamba-style baselines. We further give an explicit construction that achieves this power-law rate. Under the same assumptions, Sessa is the only model class among those considered that realizes flexible selective retrieval , including profiles whose influence does not decay with distance. Consistent with this theoretical advantage, across matched experiments, Sessa achieves the strongest performance on long-context benchmarks while remaining competitive with Transformer and Mamba-style baselines on short-context language modeling.",
+      "summary": "Modern sequence modeling is dominated by two families: Transformers , whose self-attention can access arbitrary elements of the visible sequence, and structured state-space models , which propagate information through an explicit recurrent state . These mechanisms face different limitations on long contexts: when attention is diffuse, the influence of individual tokens is diluted across the effective support, while recurrent state propagation can lose long-range sensitivity unless information is actively preserved. As a result, both mechanisms face challenges in preserving and selectively retrieving information over long contexts.",
+      "url": "https://huggingface.co/papers/2604.18580",
+      "pdfUrl": "https://arxiv.org/pdf/2604.18580",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.18580/gradient.png",
+      "upvotes": 1,
+      "publishedAt": "2026-04-27T10:12:30.600914+00:00",
+      "fetchedAt": "2026-04-27T10:12:30.600914+00:00",
+      "tags": [],
+      "arxivId": "2604.18580"
+    },
+    {
+      "id": "2604.16353",
+      "title": "AgriIR: A Scalable Framework for Domain-Specific Knowledge Retrieval",
+      "authors": [
+        "Shuvam Banerji Seal,",
+        "Aheli Poddar,",
+        "Alok Mishra,",
+        "Dwaipayan Roy"
+      ],
+      "abstract": "This paper introduces AgriIR, a configurable retrieval augmented generation (RAG) framework designed to deliver grounded, domain-specific answers while maintaining flexibility and low computational cost. Instead of relying on large, monolithic models, AgriIR decomposes the information access process into declarative modular stages -- query refinement , sub-query planning , retrieval , synthesis , and evaluation . This design allows practitioners to adapt the framework to new knowledge verticals without modifying the architecture. Our reference implementation targets Indian agricultural information access, integrating 1B-parameter language models with adaptive retrievers and domain-aware agent catalogues . The system enforces deterministic citation , integrates telemetry for transparency, and includes automated deployment assets to ensure auditable, reproducible operation. By emphasizing architectural design and modular control, AgriIR demonstrates that well-engineered pipelines can achieve domain-accurate, trustworthy retrieval even under constrained resources. We argue that this approach exemplifies ``AI for Agriculture'' by promoting accessibility, sustainability, and accountability in retrieval -augmented generation systems.",
+      "summary": "This paper introduces AgriIR, a configurable retrieval augmented generation (RAG) framework designed to deliver grounded, domain-specific answers while maintaining flexibility and low computational cost. Instead of relying on large, monolithic models, AgriIR decomposes the information access process into declarative modular stages -- query refinement , sub-query planning , retrieval , synthesis , and evaluation . This design allows practitioners to adapt the framework to new knowledge verticals without modifying the architecture.",
+      "url": "https://huggingface.co/papers/2604.16353",
+      "pdfUrl": "https://arxiv.org/pdf/2604.16353",
+      "thumbnailUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2604.16353/gradient.png",
+      "upvotes": 1,
+      "publishedAt": "2026-04-27T10:12:31.700223+00:00",
+      "fetchedAt": "2026-04-27T10:12:31.700223+00:00",
+      "tags": [],
+      "arxivId": "2604.16353"
+    }
+  ],
+  "generatedAt": "2026-04-27T10:12:32.700362+00:00"
+}
